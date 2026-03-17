@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap");
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #680319;
+  font-family: "Instrument Serif";
+  color: #fde558;
+}
+
+#canvas-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#ui-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.logo {
+  position: fixed;
+  top: 40px;
+  left: 50px;
+  font-family: "Instrument Serif";
+  font-weight: 700;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.slide-content {
+  position: absolute;
+  top: 25%;
+  left: 8%;
+  width: 30%;
+  max-width: 450px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease-out;
+  pointer-events: auto;
+}
+
+.slide-content.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 4rem;
+  margin: 0 0 1.5rem 0;
+  line-height: 1;
+  color: #fde558;
+}
+
+.catalogue-number {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fde558;
+  margin-bottom: 1.5rem;
+  display: inline-block;
+  border-bottom: 1px solid #fde558;
+  padding-bottom: 5px;
+}
+
+.description {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: #fde558;
+  margin-bottom: 3rem;
+  text-align: justify;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  row-gap: 0.8rem;
+  border-top: 1px solid #fde558;
+  padding-top: 1.5rem;
+}
+
+.meta-label {
+  font-size: 0.65rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #fde558;
+  align-self: center;
+}
+
+.meta-value {
+  font-family: "Playfair Display", serif;
+  font-size: 1.1rem;
+  font-style: italic;
+  color: #fde558;
+}
+
+.scroll-hint {
+  position: fixed;
+  bottom: 40px;
+  left: 50px;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fde558;
+  z-index: 10;
+}
+
+.slide-content a {
+  color: inherit; /* Inherit existing text color */
+  text-decoration: none; /* Remove underline */
+  display: block; /* Make the whole area clickable */
+}
+
+.project-link {
+  display: block; /* Make the entire area clickable */
+  color: inherit; /* Inherit the text color */
+  text-decoration: none; /* Remove underline */
+}

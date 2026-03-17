@@ -1,0 +1,257 @@
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 500vh;
+  font-family: "Instrument Serif";
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-color: #680319;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fde558;
+  text-align: center;
+  font-size: 5vw;
+  font-weight: lighter;
+  line-height: 100%;
+  margin-bottom: 20px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.subtitle {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fde558;
+  text-align: center;
+  font-size: 3vw;
+  font-weight: lighter;
+  line-height: 100%;
+}
+
+.arrow {
+  position: absolute;
+  bottom: 100px; /* Positioning above the bottom */
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 20px solid #fde558; /* Arrow head pointing down */
+  z-index: 2; /* Ensure it appears above other elements */
+}
+
+.arrow::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 15px; /* Move the tail up */
+  transform: translateX(-50%);
+  width: 4px; /* Tail thickness */
+  height: 30px; /* Tail length */
+  background-color: #fde558; /* Tail color */
+  z-index: 1; /* Behind the arrow head */
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 450px;
+  perspective: 1000px;
+}
+
+.card p {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 27px;
+  font-weight: 500;
+  color: #680319;
+}
+
+.card-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  animation: floating 3s infinite ease-in-out;
+}
+
+#card-1 .card-wrapper {
+  animation-delay: 0;
+}
+
+#card-2 .card-wrapper {
+  animation-delay: 0.2s;
+}
+
+#card-3 .card-wrapper {
+  animation-delay: 0.4s;
+}
+
+#card-4 .card-wrapper {
+  animation-delay: 0.6s;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 0.8em;
+  overflow: hidden;
+}
+
+.flip-card-back {
+  padding: 1em;
+  background-color: #fde558;
+  transform: rotateY(180deg);
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(-50%, -50%);
+  }
+  50% {
+    transform: translate(-50%, -60%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* From Uiverse.io by cssbuttons-io */
+.btn {
+  position: relative;
+  font-size: 27px;
+  text-decoration: none;
+  padding: 0.5em 1.5em;
+  display: inline-block;
+  cursor: pointer;
+  border-radius: 1.1em;
+  transition: all 0.2s;
+  border: none;
+  font-family: inherit;
+  font-weight: 500;
+  color: #680319;
+  background-color: #fde558;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px #680319;
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px #680319;
+}
+
+.btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all 0.4s;
+}
+
+.btn::after {
+  background-color: #fde558;
+}
+
+.btn:hover::after {
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items horizontally */
+  margin: 0; /* Remove any default margin */
+  padding: 20px 0; /* Remove any padding */
+  background-color: #680319; /* Match the background with the body */
+  height: 900px;
+}
+
+.button-container {
+  display: flex; /* Use flexbox to arrange buttons */
+  gap: 50px; /* Space between buttons */
+  justify-content: center; /* Center buttons horizontally */
+  margin-top: 550px;
+}
+
+button {
+  background: transparent; /* Remove button background */
+  cursor: pointer; /* Make the pointer a hand on hover */
+}

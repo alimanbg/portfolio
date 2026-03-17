@@ -1,0 +1,7 @@
+.DS_Store
+.Rhistory
+Thumbs.db
+*.log
+node_modules/
+dist/
+.env

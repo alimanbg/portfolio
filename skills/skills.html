@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alima's Stats</title>
+    <meta
+      name="description"
+      content="Alima's stats: technical skills, soft skills, and languages."
+    />
+    <link rel="stylesheet" href="./skills.css" />
+  </head>
+  <body>
+    <main class="page" id="page">
+      <!-- Kyrgyz ornamental background -->
+      <svg
+        class="kyrgyz-pattern"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+        focusable="false"
+      >
+        <defs>
+          <pattern
+            id="kochkor"
+            x="0"
+            y="0"
+            width="80"
+            height="80"
+            patternUnits="userSpaceOnUse"
+          >
+            <polygon
+              points="40,10 70,40 40,70 10,40"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.8"
+            />
+            <polygon
+              points="40,22 58,40 40,58 22,40"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.6"
+            />
+            <path
+              d="M0,0 Q15,5 10,15 Q5,25 15,20 Q25,15 20,5"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.7"
+            />
+            <path
+              d="M80,0 Q65,5 70,15 Q75,25 65,20 Q55,15 60,5"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.7"
+            />
+            <path
+              d="M0,80 Q15,75 10,65 Q5,55 15,60 Q25,65 20,75"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.7"
+            />
+            <path
+              d="M80,80 Q65,75 70,65 Q75,55 65,60 Q55,65 60,75"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.7"
+            />
+            <line
+              x1="40"
+              y1="0"
+              x2="40"
+              y2="10"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+            <line
+              x1="40"
+              y1="70"
+              x2="40"
+              y2="80"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+            <line
+              x1="0"
+              y1="40"
+              x2="10"
+              y2="40"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+            <line
+              x1="70"
+              y1="40"
+              x2="80"
+              y2="40"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+          </pattern>
+
+          <pattern
+            id="borderStrip"
+            x="0"
+            y="0"
+            width="40"
+            height="20"
+            patternUnits="userSpaceOnUse"
+          >
+            <polygon
+              points="10,2 20,10 10,18 2,10"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.6"
+            />
+            <polygon
+              points="30,2 38,10 30,18 22,10"
+              fill="none"
+              stroke="#fde558"
+              stroke-width="0.6"
+            />
+            <line
+              x1="0"
+              y1="10"
+              x2="2"
+              y2="10"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+            <line
+              x1="18"
+              y1="10"
+              x2="22"
+              y2="10"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+            <line
+              x1="38"
+              y1="10"
+              x2="40"
+              y2="10"
+              stroke="#fde558"
+              stroke-width="0.5"
+            />
+          </pattern>
+        </defs>
+
+        <rect width="100%" height="100%" fill="url(#kochkor)" />
+        <rect
+          x="0"
+          y="0"
+          width="100%"
+          height="24"
+          fill="url(#borderStrip)"
+          opacity="0.6"
+        />
+        <rect
+          x="0"
+          y="calc(100% - 24px)"
+          width="100%"
+          height="24"
+          fill="url(#borderStrip)"
+          opacity="0.6"
+        />
+        <line
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+          stroke="#fde558"
+          stroke-width="1.5"
+          opacity="0.25"
+        />
+        <line
+          x1="0"
+          y1="24"
+          x2="100%"
+          y2="24"
+          stroke="#fde558"
+          stroke-width="0.5"
+          opacity="0.15"
+        />
+        <line
+          x1="0"
+          y1="calc(100% - 24px)"
+          x2="100%"
+          y2="calc(100% - 24px)"
+          stroke="#fde558"
+          stroke-width="0.5"
+          opacity="0.15"
+        />
+        <line
+          x1="0"
+          y1="100%"
+          x2="100%"
+          y2="100%"
+          stroke="#fde558"
+          stroke-width="1.5"
+          opacity="0.25"
+        />
+      </svg>
+
+      <header class="header">
+        <div>
+          <h1 class="title">Alima's Stats</h1>
+          <p class="subtitle">Data Scientist · Lingnan University HK</p>
+        </div>
+        <div class="status">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="status-text">Active</span>
+        </div>
+      </header>
+
+      <!-- Mobile/tablet layout -->
+      <section class="stacked" aria-label="Stats (mobile)">
+        <div class="tabs" id="tabs-mobile"></div>
+
+        <div class="character-card">
+          <div
+            class="character"
+            id="character-mobile"
+            aria-label="3D character"
+          >
+            <div class="drag-hint">Drag to rotate</div>
+          </div>
+        </div>
+
+        <div class="panels">
+          <section class="panel" aria-label="Top attributes">
+            <div class="panel-header">
+              <div class="panel-accent" aria-hidden="true"></div>
+              <h2 class="panel-title">Top Attributes</h2>
+            </div>
+            <div class="panel-body" id="stats-mobile"></div>
+          </section>
+          <section class="panel" aria-label="Skills">
+            <div class="panel-header">
+              <div class="panel-accent" aria-hidden="true"></div>
+              <h2 class="panel-title" id="skills-title-mobile">Skills</h2>
+            </div>
+            <div
+              class="panel-body scroll custom-scrollbar"
+              id="skills-mobile"
+            ></div>
+          </section>
+        </div>
+      </section>
+
+      <!-- Desktop layout -->
+      <section class="desktop" aria-label="Stats (desktop)">
+        <div class="col-left">
+          <div class="tabs" id="tabs-desktop"></div>
+          <section class="panel panel-fill" aria-label="Top attributes">
+            <div class="panel-header">
+              <div class="panel-accent" aria-hidden="true"></div>
+              <h2 class="panel-title">Top Attributes</h2>
+            </div>
+            <div class="panel-body" id="stats-desktop"></div>
+          </section>
+        </div>
+
+        <div class="col-center">
+          <div
+            class="character"
+            id="character-desktop"
+            aria-label="3D character"
+          >
+            <div class="drag-hint">Drag to rotate</div>
+          </div>
+        </div>
+
+        <section class="panel col-right panel-fill" aria-label="Skills">
+          <div class="panel-header">
+            <div class="panel-accent" aria-hidden="true"></div>
+            <h2 class="panel-title" id="skills-title-desktop">Skills</h2>
+          </div>
+          <div
+            class="panel-body scroll custom-scrollbar"
+            id="skills-desktop"
+          ></div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Three.js + GLTFLoader (optional character.glb) -->
+    <script
+      src="https://unpkg.com/three@0.171.0/build/three.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/three@0.171.0/examples/js/loaders/GLTFLoader.js"
+      defer
+    ></script>
+    <script src="./skills.js" defer></script>
+  </body>
+</html>
