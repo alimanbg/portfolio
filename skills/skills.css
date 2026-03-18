@@ -574,6 +574,11 @@ body {
   mix-blend-mode: multiply;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .skill-name {
   margin: 0;
   font-size: 14px;

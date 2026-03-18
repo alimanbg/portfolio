@@ -3,10 +3,109 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Alima's Files</title>
+    <title>ALIMA's LOGS – Experience Map</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="experience.css" />
   </head>
   <body>
-    <p>Experience!</p>
+    <div class="cityscape" id="cityscape">
+      <!-- Header text directly on the sky -->
+      <a href="../index.html" class="top-left">ALIMA's LOGS</a>
+      <div class="center-title">EXPERIENCE MAP</div>
+
+      <!-- Pixel clouds (behind text) -->
+      <div class="cloud cloud1"></div>
+      <div class="cloud cloud2"></div>
+      <div class="cloud cloud3"></div>
+
+      <!-- Pixel character (walks on ground) -->
+      <div class="character" id="character" style="left: 5%; bottom: 10%"></div>
+
+      <!-- Buildings – all on ground (bottom: 10%) -->
+      <div
+        class="building building-ngo"
+        data-company="soapcycling"
+        style="left: 12%; bottom: 10%; width: 70px; height: 180px"
+      >
+        <div class="building-name">Soap Cycling</div>
+      </div>
+      <div
+        class="building building-edu"
+        data-company="cantonet"
+        style="left: 30%; bottom: 10%; width: 85px; height: 220px"
+      >
+        <div class="building-name">CantoNet</div>
+      </div>
+      <div
+        class="building building-tech"
+        data-company="campusx"
+        style="left: 50%; bottom: 10%; width: 90px; height: 240px"
+      >
+        <div class="building-name">Campus X</div>
+      </div>
+      <div
+        class="building building-ml"
+        data-company="zeno"
+        style="left: 72%; bottom: 10%; width: 80px; height: 200px"
+      >
+        <div class="building-name">Zeno Ltd.</div>
+      </div>
+      <!-- Mysterious greyed‑out building with question mark -->
+      <div
+        class="building building-mystery"
+        style="left: 88%; bottom: 10%; width: 75px; height: 160px"
+      >
+        <div class="building-name">????</div>
+        <div class="question-mark">?</div>
+      </div>
+
+      <!-- Floating logos (larger, with Zeno specially sized and centered) -->
+      <img
+        src="soapcycling.jpg"
+        alt="Soap Cycling logo"
+        class="floating-logo"
+        style="left: 12%; bottom: 45%"
+      />
+      <img
+        src="cantonet.jpg"
+        alt="CantoNet logo"
+        class="floating-logo"
+        style="left: 30%; bottom: 48%"
+      />
+      <img
+        src="campusx.jpg"
+        alt="Campus X logo"
+        class="floating-logo"
+        style="left: 50%; bottom: 42%"
+      />
+      <img
+        src="zeno.jpg"
+        alt="Zeno Ltd. logo"
+        class="floating-logo zeno-logo"
+        style="left: 72%; bottom: 46%"
+      />
+      <!-- No logo for mystery building -->
+    </div>
+
+    <!-- Centered Modal for company details -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <div class="modal-header">
+          <img class="modal-logo" id="modalLogo" src="" alt="Logo" />
+          <h2 id="modalTitle"></h2>
+        </div>
+        <div class="modal-body">
+          <p id="modalRole"></p>
+          <p id="modalDates"></p>
+          <ul id="modalHighlights"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="experience.js"></script>
   </body>
 </html>
