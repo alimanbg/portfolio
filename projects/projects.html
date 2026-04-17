@@ -7,22 +7,24 @@
     <link rel="stylesheet" href="../common/design-system.css" />
     <link rel="stylesheet" href="projects.css" />
     <style>
-      /* Fix clickability: make the entire slide-content area clickable */
-      .slide-content {
-        pointer-events: auto;
-      }
-      .project-link {
-        display: block;
-        width: 100%;
-        height: 100%;
+      /* Catalogue links only clickable */
+      .catalogue-link {
+        display: inline-block;
         text-decoration: none;
         color: inherit;
+        transition: color 0.3s ease;
+        cursor: pointer;
       }
-      /* Ensure the anchor does not break layout */
-      .slide-content a {
-        display: block;
-        width: 100%;
-        height: 100%;
+      .catalogue-link:hover {
+        color: #d4af37;
+      }
+      /* Remove full area clicking */
+      .slide-content {
+        pointer-events: none;
+      }
+      .catalogue-link,
+      .catalogue-number {
+        pointer-events: auto;
       }
     </style>
   </head>
@@ -32,7 +34,11 @@
       <a href="../index.html" class="nav-brand">ALIMA's PROJECTS</a>
       <ul class="nav-menu">
         <li><a href="projects.html" class="nav-link active">Projects</a></li>
-        <li><a href="../experience/experience.html" class="nav-link">Experience</a></li>
+        <li>
+          <a href="../experience/experience.html" class="nav-link"
+            >Experience</a
+          >
+        </li>
         <li><a href="../skills/skills.html" class="nav-link">Skills</a></li>
         <li><a href="../personal/personal.html" class="nav-link">About</a></li>
       </ul>
@@ -41,96 +47,117 @@
     <div id="canvas-container"></div>
 
     <div id="ui-layer">
-      <!-- Slide 0: Vaccine Myths (Reddit) -->
+      <!-- Slide 0: Vaccine Myths -->
       <div class="slide-content" id="slide-0">
-        <a href="https://github.com/alimanbg/Reddit-Vaccine-Myths" target="_blank" class="project-link">
+        <a
+          href="https://github.com/alimanbg/Reddit-Vaccine-Myths"
+          target="_blank"
+          class="catalogue-link"
+        >
           <span class="catalogue-number">01 / Project</span>
-          <h1>Vaccine<br />Myths</h1>
-          <div class="description">
-            Analyzed 1,600+ posts from Reddit’s r/VaccineMyths using VADER
-            sentiment analysis, LDA topic modeling, and Louvain community
-            detection in Python, uncovering two echo chambers with predominantly
-            negative sentiment and dense misinformation networks visualized.
-          </div>
-          <div class="meta-grid">
-            <span class="meta-label">Artist</span>
-            <span class="meta-value">Alima Nur Begimbaeva</span>
-            <span class="meta-label">Year</span>
-            <span class="meta-value">2025</span>
-            <span class="meta-label">Medium</span>
-            <span class="meta-value">Python: Matplotlib & NetworkX</span>
-          </div>
         </a>
+        <h1>Vaccine<br />Myths</h1>
+        <div class="description">
+          Analyzed 1,600+ posts from Reddit's r/VaccineMyths using VADER
+          sentiment analysis, LDA topic modeling, and Louvain community
+          detection in Python, uncovering two echo chambers with predominantly
+          negative sentiment and dense misinformation networks visualized.
+        </div>
+        <div class="meta-grid">
+          <span class="meta-label">Artist</span
+          ><span class="meta-value">Alima Nur Begimbaeva</span>
+          <span class="meta-label">Year</span
+          ><span class="meta-value">2025</span>
+          <span class="meta-label">Medium</span
+          ><span class="meta-value">Python: Matplotlib & NetworkX</span>
+        </div>
       </div>
 
       <!-- Slide 1: Nomadic Meat Consumption -->
       <div class="slide-content" id="slide-1">
-        <a href="https://github.com/alimanbg/Meat-Consumption-Kyrgyzstan" target="_blank" class="project-link">
+        <a
+          href="https://github.com/alimanbg/Meat-Consumption-Kyrgyzstan"
+          target="_blank"
+          class="catalogue-link"
+        >
           <span class="catalogue-number">02 / Project</span>
-          <h1>Nomadic Meat<br />Consumption</h1>
-          <div class="description">
-            Looking at the data I realized that the food emissions of Kyrgyz
-            Republic is not as high as expected. Which is why I decided to do my
-            minor capstone project about this topic. I talked to my grandparents,
-            did literature review and data analysis to dive more into the
-            traditional sustainable practices of kyrgyz people for global
-            application.
-          </div>
-          <div class="meta-grid">
-            <span class="meta-label">Artist</span>
-            <span class="meta-value">Alima Nur Begimbaeva</span>
-            <span class="meta-label">Year</span>
-            <span class="meta-value">2025</span>
-            <span class="meta-label">Medium</span>
-            <span class="meta-value">EDA, Python, Statistics</span>
-          </div>
         </a>
+        <h1>Nomadic Meat<br />Consumption</h1>
+        <div class="description">
+          Looking at the data I realized that the food emissions of Kyrgyz
+          Republic is not as high as expected. Which is why I decided to do my
+          minor capstone project about this topic. I talked to my grandparents,
+          did literature review and data analysis to dive more into the
+          traditional sustainable practices of kyrgyz people for global
+          application.
+        </div>
+        <div class="meta-grid">
+          <span class="meta-label">Artist</span
+          ><span class="meta-value">Alima Nur Begimbaeva</span>
+          <span class="meta-label">Year</span
+          ><span class="meta-value">2025</span>
+          <span class="meta-label">Medium</span
+          ><span class="meta-value">EDA, Python, Statistics</span>
+        </div>
       </div>
 
       <!-- Slide 2: Mixingo -->
       <div class="slide-content" id="slide-2">
-        <a href="https://github.com/alimanbg/mixingo" target="_blank" class="project-link">
+        <a
+          href="https://github.com/alimanbg/mixingo"
+          target="_blank"
+          class="catalogue-link"
+        >
           <span class="catalogue-number">03 / Project</span>
-          <h1>Mixingo: <br />AI Optimizer</h1>
-          <div class="description">
-            Multilingual learners waste time on redundant content. Mixingo
-            analyzes warm-up performance and known languages to create a
-            personalized learning path, removing up to 32% of unnecessary modules.
-          </div>
-          <div class="meta-grid">
-            <span class="meta-label">Artist</span>
-            <span class="meta-value">Hack the East: Digital Nomads</span>
-            <span class="meta-label">Year</span>
-            <span class="meta-value">February 2026</span>
-            <span class="meta-label">Medium</span>
-            <span class="meta-value">FastAPI, Pydantic, Next.js, Tailwind, OpenAI</span>
-          </div>
         </a>
+        <h1>Mixingo: <br />AI Optimizer</h1>
+        <div class="description">
+          Multilingual learners waste time on redundant content. Mixingo
+          analyzes warm-up performance and known languages to create a
+          personalized learning path, removing up to 32% of unnecessary modules.
+        </div>
+        <div class="meta-grid">
+          <span class="meta-label">Artist</span
+          ><span class="meta-value">Hack the East: Digital Nomads</span>
+          <span class="meta-label">Year</span
+          ><span class="meta-value">February 2026</span>
+          <span class="meta-label">Medium</span
+          ><span class="meta-value"
+            >FastAPI, Pydantic, Next.js, Tailwind, OpenAI</span
+          >
+        </div>
       </div>
 
       <!-- Slide 3: LinkGen -->
       <div class="slide-content" id="slide-3">
-        <a href="https://github.com/alimanbg/LinkGen" target="_blank" class="project-link">
+        <a
+          href="https://github.com/alimanbg/LinkGen"
+          target="_blank"
+          class="catalogue-link"
+        >
           <span class="catalogue-number">04 / Project</span>
-          <h1>LinkGen:<br />Elderly Companion</h1>
-          <div class="description">
-            React Native + Firebase mobile app to combat elderly loneliness in Hong Kong.
-            Features role‑based access, chat, events, and full i18n (English, Simplified Chinese, Traditional Chinese).
-          </div>
-          <div class="meta-grid">
-            <span class="meta-label">Artist</span>
-            <span class="meta-value">Alima Nur Begimbaeva & Disha & Mirnaali</span>
-            <span class="meta-label">Year</span>
-            <span class="meta-value">2025</span>
-            <span class="meta-label">Medium</span>
-            <span class="meta-value">React Native, Firebase, i18n</span>
-          </div>
         </a>
+        <h1>LinkGen:<br />Elderly Companion</h1>
+        <div class="description">
+          React Native + Firebase mobile app to combat elderly loneliness in
+          Hong Kong. Features role‑based access, chat, events, and full i18n
+          (English, Simplified Chinese, Traditional Chinese).
+        </div>
+        <div class="meta-grid">
+          <span class="meta-label">Artist</span
+          ><span class="meta-value"
+            >Alima Nur Begimbaeva & Disha & Mirnaali</span
+          >
+          <span class="meta-label">Year</span
+          ><span class="meta-value">2025</span>
+          <span class="meta-label">Medium</span
+          ><span class="meta-value">React Native, Firebase, i18n</span>
+        </div>
       </div>
     </div>
 
     <div class="scroll-hint">Scroll to explore</div>
-    
+
     <footer class="unified-footer">
       <div class="footer-content">
         <p>&copy; 2024 Alima Nur Begimbaeva. All rights reserved.</p>
@@ -141,7 +168,7 @@
         </ul>
       </div>
     </footer>
-    
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./projects.js"></script>
   </body>

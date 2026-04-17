@@ -13,22 +13,23 @@
   --neutral-gray: #666;
   --neutral-light-gray: #ccc;
   --white: #ffffff;
-  
+
   /* Color RGB Values for Opacity */
   --primary-dark-rgb: 104 3 25;
   --primary-light-rgb: 253 229 88;
   --accent-gold-rgb: 212 175 55;
   --neutral-dark-rgb: 26 26 26;
   --neutral-light-rgb: 248 246 240;
-  
+
   /* Typography */
-  --font-serif-primary: 'Playfair Display', serif;
-  --font-serif-secondary: 'Merriweather', serif;
-  --font-sans-primary: 'Roboto Slab', sans-serif;
-  --font-sans-secondary: 'Instrument Serif', serif;
-  --font-mono: 'ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', monospace;
-  --font-pixel: 'Press Start 2P', cursive;
-  
+  --font-serif-primary: "Playfair Display", serif;
+  --font-serif-secondary: "Merriweather", serif;
+  --font-sans-primary: "Roboto Slab", sans-serif;
+  --font-sans-secondary: "Instrument Serif", serif;
+  --font-mono:
+    "ui-monospace", "SFMono-Regular", "Menlo", "Monaco", "Consolas", monospace;
+  --font-pixel: "Press Start 2P", cursive;
+
   /* Spacing Scale */
   --space-xs: 4px;
   --space-sm: 8px;
@@ -37,7 +38,7 @@
   --space-xl: 32px;
   --space-2xl: 48px;
   --space-3xl: 64px;
-  
+
   /* Border Radius */
   --radius-sm: 4px;
   --radius-md: 8px;
@@ -45,18 +46,18 @@
   --radius-xl: 16px;
   --radius-2xl: 24px;
   --radius-full: 999px;
-  
+
   /* Shadows */
   --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
   --shadow-pixel: 8px 8px 0 rgba(0, 0, 0, 0.5);
-  
+
   /* Transitions */
   --transition-fast: 0.15s ease;
   --transition-normal: 0.3s ease;
   --transition-slow: 0.6s ease;
-  
+
   /* Z-Index Scale */
   --z-dropdown: 100;
   --z-modal: 200;
@@ -111,6 +112,11 @@ body {
 }
 
 .nav-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  flex: none;
+  margin: 0;
   font-family: var(--font-serif-primary);
   font-weight: 700;
   font-size: 18px;
@@ -119,6 +125,11 @@ body {
   color: var(--primary-light);
   text-decoration: none;
   transition: color var(--transition-fast);
+  text-align: center;
+}
+
+.unified-nav {
+  position: relative;
 }
 
 .nav-brand:hover {
@@ -309,15 +320,15 @@ body {
   .unified-nav {
     padding: var(--space-sm) var(--space-md);
   }
-  
+
   .nav-menu {
     display: none;
   }
-  
+
   .nav-brand {
     font-size: 16px;
   }
-  
+
   .nav-back {
     font-size: 12px;
     padding: var(--space-xs) var(--space-sm);
@@ -330,7 +341,7 @@ body {
     gap: var(--space-sm);
     padding: var(--space-sm);
   }
-  
+
   .footer-links {
     flex-direction: column;
     gap: var(--space-md);
@@ -398,7 +409,8 @@ body {
 }
 
 @keyframes pulse {
-  0%, 100% {
+  0%,
+  100% {
     transform: scale(1);
     opacity: 1;
   }

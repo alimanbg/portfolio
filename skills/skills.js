@@ -427,8 +427,8 @@ function setCategory(catId) {
 }
 
 function initThree(container) {
-  const THREE = window.THREE;
-  if (!THREE) return () => {};
+  // Disabled 3D, using static image instead
+  return () => {};
 
   let isDown = false;
   let lastX = 0;
