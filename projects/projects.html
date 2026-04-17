@@ -18,13 +18,16 @@
       .catalogue-link:hover {
         color: #d4af37;
       }
-      /* Remove full area clicking */
+      /* Ensure no visual overlap */
       .slide-content {
         pointer-events: none;
       }
       .catalogue-link,
       .catalogue-number {
         pointer-events: auto;
+      }
+      h1 {
+        margin-top: 3rem;
       }
     </style>
   </head>
@@ -157,17 +160,6 @@
     </div>
 
     <div class="scroll-hint">Scroll to explore</div>
-
-    <footer class="unified-footer">
-      <div class="footer-content">
-        <p>&copy; 2024 Alima Nur Begimbaeva. All rights reserved.</p>
-        <ul class="footer-links">
-          <li><a href="#" class="footer-link">LinkedIn</a></li>
-          <li><a href="#" class="footer-link">GitHub</a></li>
-          <li><a href="#" class="footer-link">Email</a></li>
-        </ul>
-      </div>
-    </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="./projects.js"></script>
