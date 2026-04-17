@@ -48,10 +48,10 @@ const textureLoader = new THREE.TextureLoader();
 const planeGeo = new THREE.PlaneGeometry(CONFIG.pWidth, CONFIG.pHeight);
 
 const images = [
-  "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?w=800&q=80",
-  "https://images.unsplash.com/photo-1582201942988-13e60e4556ee?w=800&q=80",
-  "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=800&q=80",
-  "https://images.unsplash.com/photo-1577720580479-7d839d829c73?w=800&q=80",
+  "./vaccine.jpg",
+  "./nomad.jpg",
+  "./mixingo.png",
+  "./linkgen.png",
 ];
 
 const paintingGroups = [];

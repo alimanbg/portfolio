@@ -337,7 +337,7 @@ body {
   height: 150px;
   transform: translateX(-50%); /* center horizontally */
   left: 72% !important; /* override inline left to keep alignment */
-  bottom: 46% !important;
+  bottom: 35% !important; /* positioned to sit on top of the building */
 }
 
 /* ---------- The pixel character (walks horizontally only) ---------- */

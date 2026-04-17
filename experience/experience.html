@@ -4,16 +4,27 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ALIMA's LOGS – Experience Map</title>
+    <link rel="stylesheet" href="../common/design-system.css" />
     <link
       href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="experience.css" />
   </head>
-  <body>
+  <body class="theme-experience">
+    <nav class="unified-nav">
+      <a href="../index.html" class="nav-back">← Back</a>
+      <a href="../index.html" class="nav-brand">ALIMA's LOGS</a>
+      <ul class="nav-menu">
+        <li><a href="../projects/projects.html" class="nav-link">Projects</a></li>
+        <li><a href="experience.html" class="nav-link active">Experience</a></li>
+        <li><a href="../skills/skills.html" class="nav-link">Skills</a></li>
+        <li><a href="../personal/personal.html" class="nav-link">About</a></li>
+      </ul>
+    </nav>
+    
     <div class="cityscape" id="cityscape">
       <!-- Header text directly on the sky -->
-      <a href="../index.html" class="top-left">ALIMA's LOGS</a>
       <div class="center-title">EXPERIENCE MAP</div>
 
       <!-- Pixel clouds (behind text) -->
@@ -101,10 +112,22 @@
         <div class="modal-body">
           <p id="modalRole"></p>
           <p id="modalDates"></p>
+          <p id="modalLocation"></p>
           <ul id="modalHighlights"></ul>
         </div>
       </div>
     </div>
+
+    <footer class="unified-footer">
+      <div class="footer-content">
+        <p>&copy; 2024 Alima Nur Begimbaeva. All rights reserved.</p>
+        <ul class="footer-links">
+          <li><a href="#" class="footer-link">LinkedIn</a></li>
+          <li><a href="#" class="footer-link">GitHub</a></li>
+          <li><a href="#" class="footer-link">Email</a></li>
+        </ul>
+      </div>
+    </footer>
 
     <script src="experience.js"></script>
   </body>
